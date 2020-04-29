@@ -12,6 +12,9 @@ import CreateArticle from "./components/create-article.component";
 import EditArticle from "./components/edit-article.component";
 import ArticleList from "./components/article-list.component";
 import ArticleReadPanel from "./components/articleReadPanel";
+import AboutAuthor from "./components/about-author.component";
+import Contact from "./components/contact.component";
+
 //import CommentContainer from "./components/commentContainer";
 
 function App() {
@@ -39,6 +42,16 @@ function App() {
                   Article list
                 </Link>
               </Nav>
+              <Nav>
+                <Link to={"/about-author"} className="nav-link">
+                  About me
+                </Link>
+              </Nav>
+              <Nav>
+                <Link to={"/contact"} className="nav-link">
+                  Contact
+                </Link>
+              </Nav>
             </Nav>
 
           </Container>
@@ -55,6 +68,8 @@ function App() {
                 <Route path="/edit-article/:id" component={EditArticle} />
                 <Route path="/article-list" component={ArticleList} />
                 <Route exact path="/read-panel/:id" component={ArticleReadPanel} />
+                <Route path="/about-author" component={AboutAuthor}/>
+                <Route path="/contact" component={Contact}/>
               </Switch>
             </div>
           </Col>
