@@ -116,7 +116,7 @@ export default class CreateArticle extends Component {
 
                 <Form.Group controlId="Content">
                     <Form.Label>Content</Form.Label>
-                    <Form.Control type="text" name="content" onChange={this.onChange}/>
+                    <Form.Control as="textarea" type="text" name="content" onChange={this.onChange}/>
                     {errors.content.length > 0 &&
                     <span className='error'>{errors.content}</span>}
                 </Form.Group>
@@ -129,6 +129,7 @@ export default class CreateArticle extends Component {
         </div>);
     }
 }
+
 
 
 /*export default class CreateArticle extends Component {
