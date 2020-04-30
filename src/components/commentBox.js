@@ -31,30 +31,20 @@ export default class CommentBox extends Component {
         }
     }
 
-    /*axios.put('http://localhost:5000/articles/update-article/'
-            + this.props.match.params.id, article)
-            .then(res => {
-                console.log(res.data)
-                console.log('Updated!')
-            }).catch(error => {
-            */
-
     render() {
         return (
             <Form onSubmit={this.addComment}>
-                <h1>Kindly leave your thoughts below</h1>
+                <p>KINDLY LEAVE YOUR THOUGHTS BELOW</p>
 
                 <Form.Group controlId="CommentatorID">
-                    <Form.Label></Form.Label>
-                    <Form.Control type="text" name="name" placeholder="Your name"/>
+                    <Form.Control size="sm" type="text" name="name" placeholder="Your name"/>
                 </Form.Group>
 
                 <Form.Group controlId="Comment">
-                    <Form.Label></Form.Label>
-                    <Form.Control type="text" name="comment" placeholder="Add a comment"/>
+                    <Form.Control size="sm" type="text" name="comment" placeholder="Add a comment"/>
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" size="sm" type="submit">
                     Submit
                 </Button>
             </Form>

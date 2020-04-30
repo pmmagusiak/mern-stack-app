@@ -34,11 +34,13 @@ export default class ArticleReadPanel extends Component {
     render() {
         return (
             <div>
-                <Card.Body>
-                    <Card.Title>"{this.state.title}"</Card.Title>
+                <Card.Body className="articleText">
+                    <Card.Title><strong>"{this.state.title}"</strong></Card.Title>
                     <Card.Subtitle className="mb-3 text-muted">Author: {this.state.author}</Card.Subtitle>
                     <Card.Text>{this.state.content}</Card.Text>
                 </Card.Body>
+                <br/>
+                <br/>
                 <div><CommentContainer/></div>
             </div>
         )

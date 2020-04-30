@@ -25,46 +25,6 @@ export default class CommentContainer extends Component {
             })
     }
 
-    /*componentDidMount() {
-        axios.get('http://localhost:5000/articles/read-panel/' + this.props.match.params.id)
-            .then(res => {
-                this.setState({
-                    title: res.data.title,
-                    author: res.data.author,
-                    content: res.data.content
-                });
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }*/
-
-    /*dataTable() {
-        return this.state.articles.map((res, i) => {
-            return <ArticleTableRow obj={res} key={i}/>;
-        });
-    }*/
-
-    /*componentDidMount() {
-        /*global Ably*/
-        /*const channel = Ably.channels.get('comments');
-      
-        channel.attach();
-          channel.once('attached', () => {
-            channel.history((err, page) => {
-              // create a new array with comments only in an reversed order (i.e old to new)
-              const comments = Array.from(page.items, item => item.data)
-      
-              this.setState({ comments });
-      
-              channel.subscribe((msg) => {
-                const commentObject = msg.data;
-                this.handleAddComment(commentObject);
-              })
-            });
-          });
-      }*/
-
     handleAddComment(comment) {
         this.setState(prevState => {
             return {
@@ -91,11 +51,3 @@ export default class CommentContainer extends Component {
         );
     }
 }
-
-
-
-
-/*{this.props.comments.map((res, i) => {
-                    return <Comment key={i} comment={res}/>
-                    <Comment comments={this.state.comments}/>
-                })*/

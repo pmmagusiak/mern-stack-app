@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.logoImage {
+  height: 7vh;
+}
+
 .wrapper {
   padding-top: 30px;
 }
@@ -6,18 +12,26 @@ body h3 {
   margin-bottom: 25px;
 }
 
-.navbar-brand a {
-  color: #ffffff;
+.navbarContainer {
+  background-color: #D9BABA
 }
 
-.form-wrapper,
-.table-wrapper {
-  max-width: 500px;
+.navbar-brand a {
+  color: black;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.form-wrapper {
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.table-wrapper {
-  max-width: 700px;
+.form-wrapperContact {
+  width: 30vw;
 }
 
 .edit-link {
@@ -26,14 +40,42 @@ body h3 {
   line-height: normal;
   border-radius: 0.2rem;
   color: #fff;
-  background-color: #28a745;
+  background-color:#599E88;
   border-color: #28a745;
   margin-right: 10px;
   position: relative;
-  top: 1px;
+  top: 2px;
 }
 
 .edit-link:hover {
   text-decoration: none;
   color: #ffffff;
+}
+
+.articleList {
+  height: 80vh;
+  max-width: 100vw;
+}
+
+.btn1 {
+  padding: 6px 5px;
+  font-size: 0.875rem;
+  line-height: 10px;
+  border-radius: 0.2rem;
+  color: #fff;
+  position: relative;
+}
+
+.articleText {
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+}
+
+.about-info {
+  text-align: justify;
+}
+
+.iFrame {
+  width: 100vw;
+  margin-bottom: 30px;
 }

@@ -43,8 +43,8 @@ export default class ArticleList extends Component {
 
     render() {
         return (
-            <div>
-                <div className="table-wrapper">
+            <div className="d-flex flex-column justify-content-between articleList"> 
+                <div>
                     <Table striped bordered hover>
                         <thead>
                         <tr>
@@ -59,14 +59,7 @@ export default class ArticleList extends Component {
                     </Table>
                 </div>
                 <div>
-                    <Alert variant="success">
-                    <Alert.Heading>Hey, nice to see you</Alert.Heading>
-                    <p>
-                      Aww yeah, you successfully read this important alert message. This example
-                      text is going to run a bit longer so that you can see how spacing within an
-                      alert works with this kind of content.
-                    </p>
-                    <hr />
+                    <Alert variant="light">
                     <p className="mb-0">
                         You are {''}
                         <Badge variant="info">{this.visitCount()}</Badge> {''}
@@ -79,45 +72,3 @@ export default class ArticleList extends Component {
     }
 
 }
-
-/*var express = require('express');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-
-var app = express();
-
-app.use(cookieParser());
-app.use(session({secret: "Shh, its a secret!"}));
-
-app.get('/', function(req, res){
-   if(req.session.page_views){
-      req.session.page_views++;
-      res.send("You visited this page " + req.session.page_views + " times");
-   } else {
-      req.session.page_views = 1;
-      res.send("Welcome to this page for the first time!");
-   }
-});
-app.listen(3000);*/
-
-
-/*let express = require('express');
-let cookieParser = require('cookie-parser');
-let session = require('express-session');
-
-let appa = express();
-
-appa.use(cookieParser());
-appa.use(session({secret: "Shh, its a secret!"}));
-
-appa.get('/article-list', function(req, res){
-    if(req.session.page_views){
-       req.session.page_views++;
-       res.send("You visited this page " + req.session.page_views + " times");
-    } else {
-       req.session.page_views = 1;
-       res.send("Welcome to this page for the first time!");
-    }
- });
-
- appa.listen(3000);*/

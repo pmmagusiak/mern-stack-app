@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-import Figure from 'react-bootstrap/Figure';
 import Button from 'react-bootstrap/Button'
 
 
@@ -27,15 +26,11 @@ export default class Comment extends Component {
 
     render() {
         return (
-            <Figure>
-                <p>
-                    <div>
+                    <div><br/>
                         <strong>{this.props.comment.name}</strong>
-                        <br/> {this.props.comment.comment}
-                        <Button onClick={this.deleteComment} size="sm" variant="danger">Delete</Button>
+                        <br/> {this.props.comment.comment}<br/>
+                        <Button onClick={this.deleteComment} className="btn1" variant="danger">Delete</Button>
                     </div>
-                </p>
-            </Figure>
         );
     }
 }

@@ -116,106 +116,16 @@ export default class CreateArticle extends Component {
 
                 <Form.Group controlId="Content">
                     <Form.Label>Content</Form.Label>
-                    <Form.Control as="textarea" type="text" name="content" onChange={this.onChange}/>
+                    <Form.Control as="textarea" rows="10" type="text" name="content" onChange={this.onChange}/>
                     {errors.content.length > 0 &&
                     <span className='error'>{errors.content}</span>}
                 </Form.Group>
 
                 <Button variant="danger" size="lg" block="block" type="submit">
-                    Create Article
+                    CREATE ARTICLE
                 </Button>
 
             </Form>
         </div>);
     }
 }
-
-
-
-/*export default class CreateArticle extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.onChangeArticleTitle = this.onChangeArticleTitle.bind(this);
-        this.onChangeArticleAuthor = this.onChangeArticleAuthor.bind(this);
-        this.onChangeArticleContent = this.onChangeArticleContent.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-
-        this.state = {
-            title: '',
-            author: '',
-            content: '',
-            
-        }
-    }
-
-    onChangeArticleTitle(e) {
-        if (
-            e.target.value.trim().length < 5 || e.target.value.trim().length > 100 || e.target.value === ''
-        ){
-            console.log('błąd!')
-        }else{
-        this.setState({title: e.target.value})}
-    }
-
-    onChangeArticleAuthor(e) {
-        this.setState({author: e.target.value})
-    }
-
-    onChangeArticleContent(e) {
-        this.setState({content: e.target.value})
-    }
-
-    onSubmit(e) {
-        e.preventDefault()
-
-        console.log(`Form submitted:`);
-        console.log(`Title: ${this.state.title}`);
-        console.log(`Author: ${this.state.author}`);
-        console.log(`Content: ${this.state.content}`);
-
-        const article = {
-            title: this.state.title,
-            author: this.state.author,
-            content: this.state.content,
-        };
-
-        axios.post('http://localhost:5000/articles/create-article', article)
-            .then(res => console.log(res.data));
-
-
-        this.setState({
-            title: '',
-            author: '',
-            content: ''
-        })
-    }
-
-
-    render() {
-        return (<div className="form-wrapper">
-            <Form onSubmit={this.onSubmit}>
-                <Form.Group controlId="Title">
-                    <Form.Label>Title</Form.Label>
-                    <Form.Control type="text" value={this.state.title} onChange={this.onChangeArticleTitle}/>
-                </Form.Group>
-
-                <Form.Group controlId="Author">
-                    <Form.Label>Author</Form.Label>
-                    <Form.Control type="text" value={this.state.author} onChange={this.onChangeArticleAuthor}/>
-                </Form.Group>
-
-                <Form.Group controlId="Content">
-                    <Form.Label>Content</Form.Label>
-                    <Form.Control type="text" value={this.state.content} onChange={this.onChangeArticleContent}/>
-                </Form.Group>
-
-                <Button variant="danger" size="lg" block="block" type="submit">
-                    Create Article
-                </Button>
-
-            </Form>
-        </div>);
-    }
-}*/

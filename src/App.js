@@ -1,4 +1,5 @@
 import React from "react";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -6,8 +7,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import logo806 from "../src/img/Obszar roboczy 1 kopia.png";
 
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import CreateArticle from "./components/create-article.component";
 import EditArticle from "./components/edit-article.component";
 import ArticleList from "./components/article-list.component";
@@ -15,39 +16,37 @@ import ArticleReadPanel from "./components/articleReadPanel";
 import AboutAuthor from "./components/about-author.component";
 import Contact from "./components/contact.component";
 
-//import CommentContainer from "./components/commentContainer";
-
 function App() {
   return (<Router>
     <div className="App">
-      <header className="App-header">
-        <Navbar bg="dark" variant="dark">
-          <Container>
+      <header className="App-header navbarContainer">
+        <Navbar>
+          <Container className="d-flex flex-wrap">
 
             <Navbar.Brand>
               <Link to={"/create-article"} className="nav-link">
-                React MERN Stack App
+                <img className="logoImage" src={logo806} alt="logo"></img>
               </Link>
             </Navbar.Brand>
 
-            <Nav className="justify-content-end">
-              <Nav>
+            <Nav className="justify-content-center">
+              <Nav className="ml-2 mr-2">
                 <Link to={"/create-article"} className="nav-link">
                   Create Article
                 </Link>
               </Nav>
 
-              <Nav>
+              <Nav className="ml-2 mr-2">
                 <Link to={"/article-list"} className="nav-link">
                   Article list
                 </Link>
               </Nav>
-              <Nav>
+              <Nav className="ml-2 mr-2">
                 <Link to={"/about-author"} className="nav-link">
                   About me
                 </Link>
               </Nav>
-              <Nav>
+              <Nav className="ml-2 mr-2">
                 <Link to={"/contact"} className="nav-link">
                   Contact
                 </Link>
@@ -80,6 +79,3 @@ function App() {
 }
 
 export default App;
-
-/*<Route path="/read-panel/comments" component={CommentContainer} />
-*/

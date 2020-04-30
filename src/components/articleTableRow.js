@@ -23,15 +23,17 @@ export default class ArticleTableRow extends Component {
     }
 
     render(){
+        let sliceText = this.props.obj.content
         return (<tr>
             <td><Link to={"/read-panel/" + this.props.obj._id}>{this.props.obj.title}</Link></td>
             <td>{this.props.obj.author}</td>
-            <td>{this.props.obj.content}</td>
-            <td>
+            <td className="d-flex justify-content-between">{sliceText.split(' ').slice(0, 6).join(' ')}...
+            <div>
                 <Link className="edit-link" to={"/edit-article/" + this.props.obj._id}>
-                    Edit
-                </Link>
-                <Button onClick={this.deleteArticle} size="sm" variant="danger">Delete</Button>
+                        Edit
+                    </Link>
+                    <Button onClick={this.deleteArticle} size="sm" variant="danger">Delete</Button>
+            </div>
             </td>
         </tr>)
     }
