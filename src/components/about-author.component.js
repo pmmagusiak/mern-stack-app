@@ -30,15 +30,15 @@ export default class AboutAuthor extends Component {
                     <Image src={AuthorPhoto} fluid rounded />
                   </Col>
                   <Col>
-                    <Image src={Auditorium} fluid rounded />
+                    <Image src={TokyoDrifter} fluid rounded />
                   </Col>
                 </Row>
                 <Row>
-                  <Col xs={6} className="pt-5">
-                    <Image src={Chungking} fluid rounded/>
+                  <Col>
+                    <Image className="pb-4" src={Auditorium} fluid rounded/>
                   </Col>
                   <Col>
-                    <Image src={TokyoDrifter} fluid rounded/>
+                    <Image className="pb-4 pt-4" src={Chungking} fluid rounded/>
                   </Col>
                 </Row>
               </Container>
