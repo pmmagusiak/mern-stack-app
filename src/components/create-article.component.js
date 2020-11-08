@@ -90,6 +90,9 @@ export default class CreateArticle extends Component {
                 author: '',
                 content: ''
             })
+
+            window.location.assign("/article-list")
+
         }else{
             console.error('Invalid form')
         }
@@ -124,7 +127,7 @@ export default class CreateArticle extends Component {
                 <Button variant="danger" size="lg" block="block" type="submit">
                     CREATE ARTICLE
                 </Button>
-
+                
             </Form>
         </div>);
     }

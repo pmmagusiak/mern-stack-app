@@ -34,7 +34,7 @@ body h3 {
   width: 30vw;
 }
 
-.edit-link {
+/*.edit-link {
   padding: 7px 10px;
   font-size: 0.875rem;
   line-height: normal;
@@ -45,6 +45,10 @@ body h3 {
   margin-right: 10px;
   position: relative;
   top: 2px;
+}*/
+
+.articleListButton {
+  margin: 0 4px 0 0; 
 }
 
 .edit-link:hover {

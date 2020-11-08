@@ -28,10 +28,10 @@ export default class ArticleTableRow extends Component {
             <td><Link to={"/read-panel/" + this.props.obj._id}>{this.props.obj.title}</Link></td>
             <td>{this.props.obj.author}</td>
             <td className="d-flex justify-content-between">{sliceText.split(' ').slice(0, 6).join(' ')}...
-            <div>
-                <Link className="edit-link" to={"/edit-article/" + this.props.obj._id}>
+            <div className="d-flex flex-nowrap justify-content-between align-items-center">
+                <Link to={"/edit-article/" + this.props.obj._id}><Button className="articleListButton" size="sm" variant="info">
                         Edit
-                    </Link>
+                    </Button></Link>
                     <Button onClick={this.deleteArticle} size="sm" variant="danger">Delete</Button>
             </div>
             </td>

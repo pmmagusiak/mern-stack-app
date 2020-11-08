@@ -8,6 +8,9 @@ let commentSchema = new Schema({
         },
         comment: {
             type: String
+        },
+        idArticle: {
+            type: String
         }
     },{
         collection: 'comments'

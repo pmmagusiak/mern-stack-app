@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import CommentBox from './commentBox';
 import axios from 'axios'
+import CommentBox from './commentBox';
 import Comment from './comment'
 
 export default class CommentContainer extends Component {
