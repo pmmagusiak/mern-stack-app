@@ -34,19 +34,6 @@ body h3 {
   width: 30vw;
 }
 
-/*.edit-link {
-  padding: 7px 10px;
-  font-size: 0.875rem;
-  line-height: normal;
-  border-radius: 0.2rem;
-  color: #fff;
-  background-color:#599E88;
-  border-color: #28a745;
-  margin-right: 10px;
-  position: relative;
-  top: 2px;
-}*/
-
 .articleListButton {
   margin: 0 4px 0 0; 
 }
@@ -54,6 +41,10 @@ body h3 {
 .edit-link:hover {
   text-decoration: none;
   color: #ffffff;
+}
+
+.commentContainerStyle {
+  margin-bottom: 50px;
 }
 
 .articleList {

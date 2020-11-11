@@ -16,6 +16,7 @@ export default class CommentContainer extends Component {
     componentDidMount() {
         axios.get('http://localhost:5000/articles/comments')
             .then(res => {
+                console.log(res.data)
                 this.setState({
                     comments: res.data
                 });
@@ -33,18 +34,21 @@ export default class CommentContainer extends Component {
         });
     }
 
+
     commentList() {
         return this.state.comments.map((res, i) => {
-            return <Comment comment={res} key={i}/>
+            console.log(res.idArticle);
+            if (this.props.commentIdArticle === res.idArticle){
+            return <Comment comment={res} key={i}/>}
+            else return null
         })
-
     }
 
     render() {
         return (
             <div>
                 <div>
-                    <CommentBox handleAddComment={this.handleAddComment}/>
+                    <CommentBox handleAddComment={this.handleAddComment} commentIdArticle={this.props.commentIdArticle}/>
                     {this.commentList()}
                 </div>
             </div>

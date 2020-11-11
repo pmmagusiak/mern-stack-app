@@ -7,19 +7,20 @@ export default class CommentBox extends Component {
     
     constructor(props) {
         super(props);
-        this.addComment = this.addComment.bind(this);
-        
+        this.addComment = this.addComment.bind(this)
     }
+
     
     addComment(e) {
         e.preventDefault();
 
         const name = e.target.name.value.trim();
         const comment = e.target.comment.value.trim();
+        const idArticle = this.props.commentIdArticle
         
         if (name && comment) {
             
-            const commentObject = {name, comment}
+            const commentObject = {name, comment, idArticle}
             
             this.props.handleAddComment(commentObject);
             

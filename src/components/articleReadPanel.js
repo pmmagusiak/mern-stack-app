@@ -12,24 +12,26 @@ export default class ArticleReadPanel extends Component {
         this.state = {
             title: '',
             author: '',
-            content: ''
+            content: '',
+            id:''
         }
     }
 
     componentDidMount() {
         axios.get('http://localhost:5000/articles/read-panel/' + this.props.match.params.id)
-            .then(res => {
+            .then(res => 
+                {
                 this.setState({
                     title: res.data.title,
                     author: res.data.author,
-                    content: res.data.content
+                    content: res.data.content,
+                    id: res.data._id
                 });
             })
             .catch(error => {
                 console.log(error)
             })
     }
-     
 
     render() {
         return (
@@ -41,7 +43,7 @@ export default class ArticleReadPanel extends Component {
                 </Card.Body>
                 <br/>
                 <br/>
-                <div><CommentContainer/></div>
+                <div className="commentContainerStyle"><CommentContainer commentIdArticle={this.state.id}/></div>
             </div>
         )
     }
