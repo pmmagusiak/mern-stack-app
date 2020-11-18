@@ -25,9 +25,9 @@ export default class ArticleTableRow extends Component {
     render(){
         let sliceText = this.props.obj.content
         return (<tr>
-            <td><Link to={"/read-panel/" + this.props.obj._id}>{this.props.obj.title}</Link></td>
+            <td className="articleListTitle"><Link to={"/read-panel/" + this.props.obj._id}>{this.props.obj.title}</Link></td>
             <td>{this.props.obj.author}</td>
-            <td className="d-flex justify-content-between">{sliceText.split(' ').slice(0, 6).join(' ')}...
+            <td className="d-flex justify-content-between border-0">{sliceText.split(' ').slice(0, 6).join(' ')}...
             <div className="d-flex flex-nowrap justify-content-between align-items-center">
                 <Link to={"/edit-article/" + this.props.obj._id}><Button className="articleListButton" size="sm" variant="info">
                         Edit

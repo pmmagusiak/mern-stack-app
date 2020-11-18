@@ -56,8 +56,8 @@ export default class CreateArticle extends Component {
                 break;
             case 'content':
                 errors.content =
-                value.trim().length < 50 || value.trim().length > 5000 || e.target.value === ''
-                ? 'Article must be between 50 and 5000 characters long!'
+                value.trim().length < 50 || value.trim().length > 10000 || e.target.value === ''
+                ? 'Article must be between 50 and 10000 characters long!'
                 :' ';
                 break;
             default:
