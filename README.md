@@ -1,3 +1,6 @@
+# MERN-stack-app
+
+This is final project of full-stack course in Altkom Akademia. The goal was to create a simple CRUD blog application, preferably using MERN stack.   
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
